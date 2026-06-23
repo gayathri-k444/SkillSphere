@@ -1,23 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import "./Navbar.css";
+import { Link } from 'react-router-dom'
+import './Navbar.css'
 
-export default function Navbar () {
+export default function Navbar() {
   return (
-    <div className="nav">
-   <h2 className="text-primary fw-bold">
-  SkillSphere
-</h2>
-    <div className="alert alert-info">
-  Welcome to SkillSphere! Start learning today.
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
 
-    <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/courses">Courses</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        
-    </ul>
+        <Link className="navbar-brand fw-bold" to="/">
+          SkillSphere
+        </Link>
+
+        <div className="navbar-nav">
+
+          <Link className="nav-link text-white me-3" to="/">
+            🏠 Home
+          </Link>
+
+          <Link className="nav-link text-white me-3" to="/courses">
+            📚 Courses
+          </Link>
+
+          <Link className="nav-link text-white" to="/dashboard">
+            📊 Dashboard
+          </Link>
+
+        </div>
+
       </div>
-    </div>
-  );
+    </nav>
+  )
 }
